@@ -9,6 +9,9 @@ import { HierarchyComponent } from './hierarchy/hierarchy.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { SubHeaderComponent } from './sub-header/sub-header.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { SubHeaderComponent } from './sub-header/sub-header.component';
     CommonModule,
     MainRoutingModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MainModule { }

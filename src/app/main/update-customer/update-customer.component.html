@@ -1,1 +1,28 @@
-<p>update-customer works!</p>
+<div class="row">
+    <div class="column" style="align-items:center; background-color: black;">
+        <form [formGroup]="userUpdateForm" class="example-form" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter Name</mat-label>
+                <input type="text" matInput formControlName="name" placeholder="Enter Name">
+                <mat-error *ngIf="userUpdateForm.controls.name.invalid">
+                    Please Enter Valid Name
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter Age</mat-label>
+                <input type="number" min="0" matInput formControlName="age" placeholder="Enter Age">
+                <mat-error *ngIf="userUpdateForm.controls.age.invalid">
+                    Please Enter Valid Age
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter Address</mat-label>
+                <textarea type="text" matInput formControlName="address" placeholder="Enter Address"></textarea>
+                <mat-error *ngIf="userUpdateForm.controls.address.invalid">
+                    Please Enter Valid Address
+                </mat-error>
+            </mat-form-field>
+            <button mat-button class="example-full-width" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
