@@ -1,0 +1,12 @@
+<app-sub-header></app-sub-header>
+<ng-container *ngFor="let eachRow of dashboardData">
+    <div class="row" style="margin-top: 4rem;">
+        <ng-container *ngFor="let data of eachRow">
+            <div class="column custom-col" style="cursor: pointer;" [@fadeInOut] [routerLink]="[data.path]">
+                <span style="align-self: center;">
+                    {{data.label}}
+                </span>
+            </div>
+        </ng-container>
+    </div>
+</ng-container>

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  appName: "Green Koncepts",
   projectStartAt: "2021-10-05"
 };
 
